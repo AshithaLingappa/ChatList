@@ -18,6 +18,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import ChatScreen from './screens/ChatScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -31,8 +32,8 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Text>Chat</Text>
+    <SafeAreaView style={{backgroundColor:"white", flex:1}}>
+      <ChatScreen/>
     </SafeAreaView>
   );
 }
