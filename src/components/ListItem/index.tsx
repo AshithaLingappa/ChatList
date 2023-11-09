@@ -15,13 +15,15 @@ const styles = StyleSheet.create({
     height: 32, 
     alignItems:"center", 
     borderRadius: 20,
-    backgroundColor:"#924af7",
+    borderWidth:1,
+    borderColor:"lightgrey",
+    backgroundColor:"white",
     justifyContent:"center", 
     width: "20%", 
     marginBottom: 16
   },
   text: {
-    color:"white"
+    color:"black"
   }
 });
 

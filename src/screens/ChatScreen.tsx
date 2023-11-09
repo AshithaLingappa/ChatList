@@ -11,8 +11,6 @@ const ChatScreen = (): ReactElement => {
   
     const [messages, setMessages] = useState([]);
     const [inputText, setInputText] = useState('');
-    const flatListRef = useRef();
-
 
     const addMessage = (text: string) => {
         //@ts-ignore
@@ -23,7 +21,6 @@ const ChatScreen = (): ReactElement => {
         if (inputText) {
           addMessage(inputText);
           setInputText('');
-          flatListRef?.current?.scrollToEnd();
         }
       };
   
@@ -38,7 +35,7 @@ const ChatScreen = (): ReactElement => {
 
   return (
       <View style={styles.main}>
-       <Header title={'Messages'} onCrossPress={onCrossPress}/>
+       <Header title={'Messages'} onCrossPress={onCrossPress} backgroundColor='pink'/>
        
        <View style={styles.inputView}>
        <TextInputComponent 
@@ -57,8 +54,6 @@ const styles = StyleSheet.create({
     backgroundColor:"#924af7"
   },
   inputView: {
-    borderTopLeftRadius: 28,
-    borderTopRightRadius: 28, 
     backgroundColor:"white", 
     padding:16
   }
