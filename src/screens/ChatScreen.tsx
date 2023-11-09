@@ -47,7 +47,7 @@ const ChatScreen = (): ReactElement => {
        handleSendMessage={handleSendMessage}/>
        </View>
 
-       <List data={messages} flatListRef={flatListRef}/>
+       <List data={messages}/>
       </View>
   );
 };
